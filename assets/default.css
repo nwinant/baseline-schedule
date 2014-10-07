@@ -1,0 +1,46 @@
+/*
+  http://www.webdesigndev.com/web-development/16-gorgeous-web-safe-fonts-to-use-with-css
+  */
+
+body {
+    padding:0;
+    margin:0;
+
+    font-family: Century Gothic, sans-serif;
+    background-color: #000;
+    color: #333;
+}
+
+.sss-timer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+.sss-timer .sss-message {
+    font-size: 24pt;
+    font-style: italic;
+}
+
+.sss-timer .sss-minutes {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 72pt;
+    font-weight: bold;
+    color: #ccc;
+    margin: auto;
+}
+
+.sss-details {
+    color: #999;
+    padding: 1em;
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+
+    text-align:right;
+    width: 200px;
+    font-size: 12pt;
+}
