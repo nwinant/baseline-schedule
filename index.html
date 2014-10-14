@@ -1,19 +1,30 @@
 <html>
   <head>
     <title>Spine!</title>
-    <link rel="stylesheet" type="text/css" href="assets/default.css">
-    <script src="js/jquery-1.11.1.js"></script> 
-    <script src="js/spine.js"></script>
 
+    <!-- Third-party libs -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!--
+    <script src="js/jquery-1.11.1.js"></script>
+    -->
+
+    <!-- Project libs -->
+    <link rel="stylesheet" type="text/css" href="assets/default.css">
+    <script src="js/spine.js"></script>
     <script>
       $( document ).ready(function() {
-          var spiner = new Spine($("#roott"), 25);
+          var duration = getParameterByName("duration");
+          if (duration == 0) {
+            duration = 25;
+          }
+          var spiner = new Spine($("#root"), duration);
       });
     </script>
   </head>
   <body>
 
-     <div id="roott"/>
+     <div id="root"/>
 
 
 <!--
