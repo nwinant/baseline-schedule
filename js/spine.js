@@ -1,10 +1,43 @@
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+/*
+function Stopwatch(milliseconds) {
+    var startDate;
+    this.start() {
+	startDate=new Date();
+    }
+}
+*/
+
 function elapsedSeconds(startTime, time) {
     return Math.floor(((time - startTime) / 1000));
 }
 
 function elapsedMinutes(startTime, time) {
     return Math.floor(((time - startTime) / 1000 / 60));
+}
+
+function elapsedTime(startTime, time) {
+    var diff = time - startTime;
+    var mins = Math.floor(diff % 36e5 / 60000);
+    var secs = Math.floor(diff % 60000 / 1000);
+    //return ('00'+mins).slice(-2) + ":" + ('00'+secs).slice(-2);
+    return mins + ":" + ('00'+secs).slice(-2);
+}
+
+function remainingTime(duration, startTime, time) {
+/*
+    var totalMS = duration 
+//    var secs = (duration * 60 * 1000) - 
+    var diff=new Date(time - startTime);
+    return diff;
+*/
+    return elapsedTime(startTime, time);
 }
 
 function Timer(parent, message) {
@@ -31,6 +64,7 @@ function Timer(parent, message) {
 	    remaining = duration;
 	}
 	remainingnode.html(remaining + " minutes");
+	//remainingnode.attr("title", remainingTime(duration, startTime, time));
     }
 }
 
@@ -48,8 +82,8 @@ function Details(parent) {
     }
     this.update = function(time) {
 	if (startTime) {
-	    var elapsed = elapsedSeconds(startTime, time);
-	    elapsednode.html(elapsed + " seconds");
+	    var elapsed = elapsedTime(startTime, time);
+	    elapsednode.html(elapsed);
 	}
     }
 }
@@ -58,7 +92,7 @@ function Spine(elem, minutes) {
     var that = this;
     var root = elem;
     var remaining = minutes;
-    var message = "I'll be available in...";
+    var message = "Available in...";
     var timer = new Timer(root, message);
     var details = new Details(root);
     var timeoutId;
