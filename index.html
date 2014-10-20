@@ -1,24 +1,21 @@
 <html>
   <head>
-    <title>Spine!</title>
+    <title>Baseline!</title>
 
     <!-- Third-party libs -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <!--
-    <script src="js/jquery-1.11.1.js"></script>
-    -->
 
     <!-- Project libs -->
     <link rel="stylesheet" type="text/css" href="assets/default.css">
-    <script src="js/spine.js"></script>
+    <script src="js/baseline-schedule.js"></script>
     <script>
       $( document ).ready(function() {
           var duration = getParameterByName("duration");
           if (duration == 0) {
             duration = 25;
           }
-          var spiner = new Spine($("#root"), duration);
+          var baseline = new Spine($("#root"), duration);
       });
     </script>
   </head>
@@ -27,30 +24,30 @@
      <div id="root"/>
 
 
-<!--
-     <div id="spine"/>
--->
-<!--
-    <div id="spine">
+     <!--
+	 <div id="baseline"/>
+	 -->
+     <!--
+	 <div id="baseline">
 
-      <div class="timer">3
-	<div class="message">I'll be available in...</div>
-	<div class="time">25 minutes</div>
-      </div>
+	   <div class="timer">3
+	     <div class="message">I'll be available in...</div>
+	     <div class="time">25 minutes</div>
+	   </div>
 
-      <!- -
-Detaiol;	  <h1>Something...</h1>
+	   <!- -
+	       Detaiol;	  <h1>Something...</h1>
 
-	  <ul>
-	    <li>item 1</li>
-	    <li>item 2</li>
-	  </ul>
-	  - ->
+	       <ul>
+		 <li>item 1</li>
+		 <li>item 2</li>
+	       </ul>
+	       - ->
 
-      <div class="details">
-	<div class="precise-time">25:00</div>
-      </div>
-    </div>
--->
+	   <div class="details">
+	     <div class="precise-time">25:00</div>
+	   </div>
+	 </div>
+	 -->
   </body>
 </html>
