@@ -88,7 +88,7 @@ function Details(parent) {
     }
 }
 
-function Spine(elem, minutes) {
+function BaselineSchedule(elem, minutes) {
     var that = this;
     var root = elem;
     var remaining = minutes;
