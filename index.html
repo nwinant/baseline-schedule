@@ -11,7 +11,7 @@
     <script src="js/baseline-schedule.js"></script>
     <script>
       $( document ).ready(function() {
-          var duration = getParameterByName("duration");
+          var duration = BaselineUtils.getParameterByName("duration");
           if (duration == 0) {
             duration = 25;
           }
