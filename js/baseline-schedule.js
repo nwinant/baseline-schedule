@@ -8,15 +8,6 @@ var BaselineUtils = {
     }
 }
 
-/*
-function Stopwatch(milliseconds) {
-    var startDate;
-    this.start() {
-	startDate=new Date();
-    }
-}
-*/
-
 function elapsedSeconds(startTime, time) {
     return Math.floor(((time - startTime) / 1000));
 }
