@@ -44,3 +44,25 @@ body {
     width: 200px;
     font-size: 12pt;
 }
+
+ .sss-precise-time { 
+    line-height: 32px;
+    vertical-align: bottom;
+}
+
+.sss-github-link {
+    display: block;
+    float:right;
+    width: 32px; 
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+    margin-left: 10px;
+    background-image: url('GitHub-Mark-32px.png');
+}
+
+.sss-github-link :hover {
+    display: block;
+    float:right;
+    background-image: url('GitHub-Mark-Light-32px.png');
+}

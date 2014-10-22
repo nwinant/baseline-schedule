@@ -74,9 +74,11 @@ function Timer(parent, message) {
 function Details(parent) {
     var that=this;
     var startTime;
-    var elapsednode = $("<div class='sss-precise-time'/>");
+    var elapsednode = $("<span class='sss-precise-time'/>");
+    var githubnode = $("<span class='sss-github-link'><a href='https://github.com/nathanwinant/baseline-schedule' target='mir'><img src='assets/transparent-1x1.gif' width='32' height='32' title='Fork me on GitHub' /></a></span>");
     this.node = $("<div class='sss-details'/>");
     this.node.append(elapsednode);
+    this.node.append(githubnode);
     parent.append(this.node);
     this.reset = function(time) {
 	seconds = 0;
