@@ -5,3 +5,11 @@ A simple, flexible web-based organizer for structuring your daily schedule. It d
 
 Currently in early development. At this point, merely a web-based [Pomodoro](http://pomodorotechnique.com/) timer.
 
+Usage
+-----
+
+To use the timer, head to <http://exegetic.net/baseline-schedule/>.
+
+The default is 25 minutes. To specify a different duration, append `?duration=[NUMBER_OF_MINUTES]`, like so: <http://exegetic.net/baseline-schedule/?duration=60>.
+
+
